@@ -210,7 +210,7 @@ const StyledLink = styled(({ active, children, ...rest }) => (
 
 const Badge = styled.span`
   color: white;
-  background: ${props => props.theme.secondary}
+  background: ${props => props.theme.secondary};
   border-radius: 10px;
   padding: 2px 7px;
   min-width: 10px;

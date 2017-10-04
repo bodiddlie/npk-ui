@@ -79,6 +79,10 @@ to a parameterized route on your dashboard.
 
 This determines if the `exact` attribute on the React Route `Route` gets set or not.
 
+> **badgeCount** | `number`
+
+If given, a badge will be displayed to the right of the created link that shows a badge with the number provided.
+
 #### Simple Example
 
 ```jsx
