@@ -22,7 +22,7 @@ or
 yarn add npk-ui
 ```
 
-> This package also depends on `react`, `prop-types`, and `react-router-dom`. Make sure those are all installed!
+> This package also depends on `react`, `prop-types`, `styled-components` and `react-router-dom`. Make sure those are all installed!
 
 ## Components
 

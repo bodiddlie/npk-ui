@@ -10,6 +10,7 @@ export default {
   },
   plugins: [
     resolve({
+      extensions: ['.js', '.jsx'],
       customResolveOptions: {
         moduleDirectory: 'node_modules',
       },
@@ -17,5 +18,6 @@ export default {
     babel({ exclude: 'node_modules/**' }),
     commonjs(),
   ],
-  external: name => /react|prop-types/.test(name),
+  external: name =>
+    /react|prop-types|styled-components|react-router-dom/.test(name),
 }
