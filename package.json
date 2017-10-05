@@ -1,12 +1,13 @@
 {
   "name": "npk-ui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "ui library for reusing my simple designs at work",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
     "build": "rollup -c",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "prepublish": "yarn build"
   },
   "peerDependencies": {
     "prop-types": ">=15",
