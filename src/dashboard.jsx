@@ -7,6 +7,7 @@ const theme = {
   primary: '#cdcdcd',
   secondary: '#ffb700',
   tertiary: '#525349',
+  heading: '#ffb700',
 }
 
 const themeFunction = outerTheme => {
@@ -15,6 +16,7 @@ const themeFunction = outerTheme => {
     if (!t.primary) t.primary = theme.primary
     if (!t.secondary) t.secondary = theme.secondary
     if (!t.tertiary) t.tertiary = theme.tertiary
+    if (!t.heading) t.heading = theme.heading
     return t
   } else {
     return theme
@@ -182,7 +184,7 @@ const Container = styled.div`
 
 const Heading = styled.h4`
   margin: 0 0 0.25rem 0;
-  color: ${props => props.theme.secondary};
+  color: ${props => props.theme.heading};
 `
 
 const Name = styled.span`

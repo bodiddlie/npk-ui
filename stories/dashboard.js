@@ -62,6 +62,7 @@ export function Themed() {
           primary: 'green',
           secondary: 'red',
           tertiary: 'darkblue',
+          heading: 'pink',
         }}
       >
         <Dashboard
