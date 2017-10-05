@@ -37,7 +37,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var theme = {
   primary: '#cdcdcd',
   secondary: '#ffb700',
-  tertiary: '#525349'
+  tertiary: '#525349',
+  heading: '#ffb700'
 };
 
 var themeFunction = function themeFunction(outerTheme) {
@@ -46,6 +47,7 @@ var themeFunction = function themeFunction(outerTheme) {
     if (!t.primary) t.primary = theme.primary;
     if (!t.secondary) t.secondary = theme.secondary;
     if (!t.tertiary) t.tertiary = theme.tertiary;
+    if (!t.heading) t.heading = theme.heading;
     return t;
   } else {
     return theme;
@@ -251,7 +253,7 @@ var Content = styled__default.div(_templateObject4);
 var Container = styled__default.div(_templateObject5);
 
 var Heading = styled__default.h4(_templateObject6, function (props) {
-  return props.theme.secondary;
+  return props.theme.heading;
 });
 
 var Name = styled__default.span(_templateObject7);
