@@ -3,25 +3,27 @@ import PropTypes from 'prop-types'
 import styled, { ThemeProvider } from 'styled-components'
 import { Link, Switch, Route } from 'react-router-dom'
 
-const theme = {
-  primary: '#cdcdcd',
-  secondary: '#ffb700',
-  tertiary: '#525349',
-  heading: '#ffb700',
-}
+import { themeFunction } from './theme'
 
-const themeFunction = outerTheme => {
-  if (outerTheme) {
-    const t = { ...outerTheme }
-    if (!t.primary) t.primary = theme.primary
-    if (!t.secondary) t.secondary = theme.secondary
-    if (!t.tertiary) t.tertiary = theme.tertiary
-    if (!t.heading) t.heading = theme.heading
-    return t
-  } else {
-    return theme
-  }
-}
+// const theme = {
+//   primary: '#cdcdcd',
+//   secondary: '#ffb700',
+//   tertiary: '#525349',
+//   heading: '#ffb700',
+// }
+
+// const themeFunction = outerTheme => {
+//   if (outerTheme) {
+//     const t = { ...outerTheme }
+//     if (!t.primary) t.primary = theme.primary
+//     if (!t.secondary) t.secondary = theme.secondary
+//     if (!t.tertiary) t.tertiary = theme.tertiary
+//     if (!t.heading) t.heading = theme.heading
+//     return t
+//   } else {
+//     return theme
+//   }
+// }
 
 const UserInfo = ({ user, heading, logo }) => (
   <Container>
