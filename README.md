@@ -114,6 +114,76 @@ function App() {
 }
 ```
 
+### Modal
+
+A simple component using the new React 16 portal feature to display a modal over a transparent overlay. 
+
+#### Sample Usage
+
+```jsx
+import {Modal} from 'npk-ui'
+
+class App extends React.Component {
+  state = {
+    showModal: false,
+  }
+
+  handleClose = () => {
+    this.setState({showModal: false})
+  }
+
+  buttonClick = () => {
+    this.setState({showModal: true})
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Main Content</h1>
+        <button type="button" onClick={this.buttonClick}>
+          Show Modal
+        </button>
+        {this.state.showModal && (
+          <Modal
+            handleClose={this.handleClose}
+            closeIcon={<span>X</span>}
+            heading="Modal Heading Text"
+          >
+            <h2>The contents of the modal go here.</h2>
+          </Modal>
+        )}
+      </div>
+    )
+  }
+}
+```
+
+#### props
+
+##### handleClose
+
+> `function(void)` | required
+
+A callback to notify when the close button has been clicked.
+
+##### closeIcon
+
+> `React.node`
+
+What to render for the close icon in the top right of the modal.
+
+##### heading
+
+> `string` | defaults to empty string
+
+The heading to render at the top of the modal.
+
+##### children
+
+> `React.node`
+
+This content will be rendered inside of the modal.
+
 ## Examples
 
 Examples can be found in the stories folder.
