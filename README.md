@@ -48,6 +48,12 @@ Used to give a heading to the dashboard sidebar.
 
 Will be used as `src` attribute for a image in the sidebar. Omit if no image is wanted.
 
+##### hideSidbar
+
+> `boolean` | defaults to false
+
+If true, will hide the sidebar.
+
 ##### routes
 
 > `array` | required

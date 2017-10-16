@@ -45,24 +45,28 @@ export class Dashboard extends React.Component {
     routes: PropTypes.array.isRequired,
     heading: PropTypes.string,
     logo: PropTypes.string,
+    hideSidebar: PropTypes.boolean,
   }
 
   static deafultProps = {
     heading: '',
+    hideSidebar: false,
   }
 
   render() {
-    const { user, routes, heading, logo } = this.props
+    const { user, routes, heading, logo, hideSidebar } = this.props
 
     return (
       <ThemeProvider theme={themeFunction}>
         <Wrapper>
-          <Sidebar>
-            <UserInfo user={user} heading={heading} logo={logo} />
-            {routes.map(r => {
-              return r.link ? buildLink(r, user) : null
-            })}
-          </Sidebar>
+          {!hideSidebar && (
+            <Sidebar>
+              <UserInfo user={user} heading={heading} logo={logo} />
+              {routes.map(r => {
+                return r.link ? buildLink(r, user) : null
+              })}
+            </Sidebar>
+          )}
           <Inner>
             <Content>
               <Switch>
