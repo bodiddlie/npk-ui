@@ -120,7 +120,8 @@ var Dashboard = function (_React$Component) {
           user = _props.user,
           routes = _props.routes,
           heading = _props.heading,
-          logo = _props.logo;
+          logo = _props.logo,
+          hideSidebar = _props.hideSidebar;
 
 
       return React.createElement(
@@ -129,7 +130,7 @@ var Dashboard = function (_React$Component) {
         React.createElement(
           Wrapper,
           null,
-          React.createElement(
+          !hideSidebar && React.createElement(
             Sidebar,
             null,
             React.createElement(UserInfo, { user: user, heading: heading, logo: logo }),
@@ -164,10 +165,12 @@ Dashboard.propTypes = {
   user: PropTypes.object.isRequired,
   routes: PropTypes.array.isRequired,
   heading: PropTypes.string,
-  logo: PropTypes.string
+  logo: PropTypes.string,
+  hideSidebar: PropTypes.boolean
 };
 Dashboard.deafultProps = {
-  heading: ''
+  heading: '',
+  hideSidebar: false
 };
 function buildLink(route, user) {
   if (route.admin) {
