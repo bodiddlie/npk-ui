@@ -166,7 +166,7 @@ Dashboard.propTypes = {
   routes: PropTypes.array.isRequired,
   heading: PropTypes.string,
   logo: PropTypes.string,
-  hideSidebar: PropTypes.boolean
+  hideSidebar: PropTypes.bool
 };
 Dashboard.deafultProps = {
   heading: '',

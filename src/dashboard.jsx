@@ -45,7 +45,7 @@ export class Dashboard extends React.Component {
     routes: PropTypes.array.isRequired,
     heading: PropTypes.string,
     logo: PropTypes.string,
-    hideSidebar: PropTypes.boolean,
+    hideSidebar: PropTypes.bool,
   }
 
   static deafultProps = {
