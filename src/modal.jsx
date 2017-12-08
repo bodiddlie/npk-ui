@@ -57,7 +57,6 @@ const Container = styled.div`
   top: calc(50% - 150px);
   left: calc(50% - 350px);
   width: 700px;
-  height: 300px;
   background: white;
   display: flex;
   flex-direction: column;
