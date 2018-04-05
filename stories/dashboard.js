@@ -53,6 +53,13 @@ const simpleRoutes = [
     component: Other,
     link: true,
   },
+  {
+    path: '/',
+    anchor: true,
+    icon: <i className="fa fa-lg fa-th" />,
+    linkText: 'Anchor',
+    link: true,
+  },
 ]
 
 export function Simple() {

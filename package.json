@@ -1,6 +1,6 @@
 {
   "name": "npk-ui",
-  "version": "1.1.2",
+  "version": "1.2.2",
   "description": "ui library for reusing my simple designs at work",
   "main": "dist/index.js",
   "license": "MIT",

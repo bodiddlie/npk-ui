@@ -98,6 +98,14 @@ function buildLink(route, user) {
     }
     return null
   }
+
+  if (route.anchor) {
+    return (
+      <Anchor href={route.path}>
+        {route.icon} {route.linkText}
+      </Anchor>
+    )
+  }
   return (
     <SidebarLink
       key={route.path}
@@ -111,6 +119,7 @@ function buildLink(route, user) {
 }
 
 function buildRoute(route, user) {
+  if (route.anchor) return null
   if (route.admin) {
     if (user.admin) {
       return (
@@ -210,6 +219,16 @@ const StyledLink = styled(({ active, children, ...rest }) => (
   color: ${props =>
     props.active ? props.theme.secondary : props.theme.primary};
   padding: 0.5rem 0.5rem;
+
+  &:hover {
+    color: ${props => props.theme.secondary};
+  }
+`
+
+const Anchor = styled.a`
+  text-decoration: none;
+  color: ${props => props.theme.primary};
+  padding: 0.5rem; 0.5rem;
 
   &:hover {
     color: ${props => props.theme.secondary};
