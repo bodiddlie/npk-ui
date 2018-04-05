@@ -200,7 +200,7 @@ function buildLink(route, user) {
   if (route.anchor) {
     return React.createElement(
       Anchor,
-      { href: route.path },
+      { key: route.path + '-' + route.linkText, href: route.path },
       route.icon,
       ' ',
       route.linkText
