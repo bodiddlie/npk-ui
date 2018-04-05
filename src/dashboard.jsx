@@ -101,7 +101,7 @@ function buildLink(route, user) {
 
   if (route.anchor) {
     return (
-      <Anchor href={route.path}>
+      <Anchor key={`${route.path}-${route.linkText}`} href={route.path}>
         {route.icon} {route.linkText}
       </Anchor>
     )
