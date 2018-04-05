@@ -43,7 +43,8 @@ var _templateObject5 = _taggedTemplateLiteral(['\n  padding: 0.5rem;\n  display:
 var _templateObject6 = _taggedTemplateLiteral(['\n  margin: 0 0 0.25rem 0;\n  color: ', ';\n'], ['\n  margin: 0 0 0.25rem 0;\n  color: ', ';\n']);
 var _templateObject7 = _taggedTemplateLiteral(['\n  font-size: 0.85rem;\n  color: white;\n'], ['\n  font-size: 0.85rem;\n  color: white;\n']);
 var _templateObject8 = _taggedTemplateLiteral(['\n  text-decoration: none;\n  color: ', ';\n  padding: 0.5rem 0.5rem;\n\n  &:hover {\n    color: ', ';\n  }\n'], ['\n  text-decoration: none;\n  color: ', ';\n  padding: 0.5rem 0.5rem;\n\n  &:hover {\n    color: ', ';\n  }\n']);
-var _templateObject9 = _taggedTemplateLiteral(['\n  color: white;\n  background: ', ';\n  border-radius: 10px;\n  padding: 2px 7px;\n  min-width: 10px;\n  vertical-align: middle;\n  text-align: center;\n  font-size: 0.8rem;\n  dipslay: inline-block;\n  font-weight: bold;\n'], ['\n  color: white;\n  background: ', ';\n  border-radius: 10px;\n  padding: 2px 7px;\n  min-width: 10px;\n  vertical-align: middle;\n  text-align: center;\n  font-size: 0.8rem;\n  dipslay: inline-block;\n  font-weight: bold;\n']);
+var _templateObject9 = _taggedTemplateLiteral(['\n  text-decoration: none;\n  color: ', ';\n  padding: 0.5rem; 0.5rem;\n\n  &:hover {\n    color: ', ';\n  }\n'], ['\n  text-decoration: none;\n  color: ', ';\n  padding: 0.5rem; 0.5rem;\n\n  &:hover {\n    color: ', ';\n  }\n']);
+var _templateObject10 = _taggedTemplateLiteral(['\n  color: white;\n  background: ', ';\n  border-radius: 10px;\n  padding: 2px 7px;\n  min-width: 10px;\n  vertical-align: middle;\n  text-align: center;\n  font-size: 0.8rem;\n  dipslay: inline-block;\n  font-weight: bold;\n'], ['\n  color: white;\n  background: ', ';\n  border-radius: 10px;\n  padding: 2px 7px;\n  min-width: 10px;\n  vertical-align: middle;\n  text-align: center;\n  font-size: 0.8rem;\n  dipslay: inline-block;\n  font-weight: bold;\n']);
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
@@ -195,6 +196,14 @@ function buildLink(route, user) {
     }
     return null;
   }
+
+  if (route.anchor) {
+    return React.createElement(
+      Anchor,
+      { href: route.path },
+      route.LinkText
+    );
+  }
   return React.createElement(
     SidebarLink,
     {
@@ -215,6 +224,7 @@ function buildLink(route, user) {
 }
 
 function buildRoute(route, user) {
+  if (route.anchor) return null;
   if (route.admin) {
     if (user.admin) {
       return React.createElement(reactRouterDom.Route, {
@@ -303,7 +313,13 @@ var StyledLink = styled__default(function (_ref4) {
   return props.theme.secondary;
 });
 
-var Badge = styled__default.span(_templateObject9, function (props) {
+var Anchor = styled__default.a(_templateObject9, function (props) {
+  return props.theme.primary;
+}, function (props) {
+  return props.theme.secondary;
+});
+
+var Badge = styled__default.span(_templateObject10, function (props) {
   return props.theme.secondary;
 });
 

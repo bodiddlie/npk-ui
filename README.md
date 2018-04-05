@@ -64,7 +64,7 @@ An array of route objects that will be used to build up React Router `Route`s. E
 
 The path the route should point to.
 
-> **icon** | `React.node` 
+> **icon** | `React.node`
 
 An optional icon to render to the left of the route links on the sidebar.
 
@@ -89,28 +89,32 @@ This determines if the `exact` attribute on the React Route `Route` gets set or 
 
 If given, a badge will be displayed to the right of the created link that shows a badge with the number provided.
 
+> **anchor** | `boolean`
+
+If given, a simple anchor tag will be created that does **NOT** use the router. Useful for if you need to have link outside of the app in the nav.
+
 #### Simple Example
 
 ```jsx
-import {Dashboard} from 'npk-ui'
+import { Dashboard } from 'npk-ui'
 import logo from './my-image.png'
 
 const routes = [
   {
-    path: '/', 
-    icon: <i className="fa fa-lg fa-home" />, 
-    linkText: 'Home', 
+    path: '/',
+    icon: <i className="fa fa-lg fa-home" />,
+    linkText: 'Home',
     component: SomeComponent,
     link: true,
     activeOnlyWhenExact: true,
-  }
+  },
 ]
 
 function App() {
   return (
     <BrowserRouter>
       <Dashboard
-        user={{admin: false, name: 'Luke Skywalker'}}
+        user={{ admin: false, name: 'Luke Skywalker' }}
         routes={routes}
         heading="Basic Dashboard"
         logo={logo}
@@ -122,12 +126,12 @@ function App() {
 
 ### Modal
 
-A simple component using the new React 16 portal feature to display a modal over a transparent overlay. 
+A simple component using the new React 16 portal feature to display a modal over a transparent overlay.
 
 #### Sample Usage
 
 ```jsx
-import {Modal} from 'npk-ui'
+import { Modal } from 'npk-ui'
 
 class App extends React.Component {
   state = {
@@ -135,11 +139,11 @@ class App extends React.Component {
   }
 
   handleClose = () => {
-    this.setState({showModal: false})
+    this.setState({ showModal: false })
   }
 
   buttonClick = () => {
-    this.setState({showModal: true})
+    this.setState({ showModal: true })
   }
 
   render() {
