@@ -231,7 +231,7 @@ function buildRoute(route, user) {
     if (user.admin) {
       return React.createElement(reactRouterDom.Route, {
         key: route.path,
-        exact: true,
+        exact: route.exact,
         path: route.path,
         render: function render(props) {
           return React.createElement(route.component, props);
@@ -243,7 +243,7 @@ function buildRoute(route, user) {
 
   return React.createElement(reactRouterDom.Route, {
     key: route.path,
-    exact: true,
+    exact: route.exact,
     path: route.path,
     render: function render(props) {
       return React.createElement(route.component, props);

@@ -83,7 +83,7 @@ to a parameterized route on your dashboard.
 
 > **activeOnlyWhenExact** | `boolean`
 
-This determines if the `exact` attribute on the React Route `Route` gets set or not.
+If true, the generated link will only highlight as active if the path is an exact match.
 
 > **badgeCount** | `number`
 
@@ -92,6 +92,10 @@ If given, a badge will be displayed to the right of the created link that shows 
 > **anchor** | `boolean`
 
 If given, a simple anchor tag will be created that does **NOT** use the router. Useful for if you need to have link outside of the app in the nav.
+
+> **exact** | `boolean`
+
+This determines if the `exact` attribute on the React Route `Route` gets set or not.
 
 #### Simple Example
 

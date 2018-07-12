@@ -125,7 +125,7 @@ function buildRoute(route, user) {
       return (
         <Route
           key={route.path}
-          exact
+          exact={route.exact}
           path={route.path}
           render={props => <route.component {...props} />}
         />
@@ -137,7 +137,7 @@ function buildRoute(route, user) {
   return (
     <Route
       key={route.path}
-      exact
+      exact={route.exact}
       path={route.path}
       render={props => <route.component {...props} />}
     />
